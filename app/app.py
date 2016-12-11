@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route('/whwater/v1')
 @app.route('/whwater/v1/')
-def hello_world():
+def show_data():
     if output():
         response = Response(output(),
                             content_type="application/json; charset=utf-8"), 201
@@ -16,4 +16,4 @@ def hello_world():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run('0.0.0.0')
